@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Chat from "./components/Chat";
-import Footer from "./components/Footer";
+import Dialog from "./components/Dialog";
+import Sender from "./components/Sender";
 import Header from "./components/Header";
 
 import { AppContext } from "./context";
@@ -24,8 +24,8 @@ const App = () => {
     >
       <div className="container">
         <Header />
-        <Chat newMessage={message} />
-        <Footer onAddMessage={addMessage} />
+        <Dialog newMessage={message} />
+        <Sender onAddMessage={addMessage} />
       </div>
     </AppContext.Provider>
   );
